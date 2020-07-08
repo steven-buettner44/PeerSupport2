@@ -1,0 +1,59 @@
+﻿@page
+@model PeerSupport2.Pages.Movies.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Movie</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Movie.City" class="control-label"></label>
+                <input asp-for="Movie.City" class="form-control" />
+                <span asp-validation-for="Movie.City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.Name" class="control-label"></label>
+                <input asp-for="Movie.Name" class="form-control" />
+                <span asp-validation-for="Movie.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.Day" class="control-label"></label>
+                <input asp-for="Movie.Day" class="form-control" />
+                <span asp-validation-for="Movie.Day" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.Hours" class="control-label"></label>
+                <input asp-for="Movie.Hours" class="form-control" />
+                <span asp-validation-for="Movie.Hours" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.Minutes" class="control-label"></label>
+                <input asp-for="Movie.Minutes" class="form-control" />
+                <span asp-validation-for="Movie.Minutes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Movie.Notes" class="control-label"></label>
+                <textarea asp-for="Movie.Notes" class="form-control"></textarea>
+                <span asp-validation-for="Movie.Notes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
